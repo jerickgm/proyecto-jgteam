@@ -15,8 +15,8 @@
             
         </div>
     </nav>
-    <div class="row">
-        <div class="col s12">
+    <div class="container">
+        <div class="row col s12">
           <ul class="tabs">
             <li class="tab col s6"><a class="active" href="#usuario">Agregar Usuario</a></li>
             <li class="tab col s6"><a href="#curso">Agregar Curso</a></li>
@@ -25,26 +25,76 @@
         <div id="usuario" class="col s12">
             <br>
             <div class="row">
-                <form class="col s12">
+                <form id="formUser" class="col s12">
                   <div class="row">
                     <div class="input-field col s4">
                       <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" class="validate" required>
+                      <input id="icon_prefix" name="nombreUser" type="text" class="validate" required>
                       <label for="icon_prefix">Nombre</label>
                     </div>
                     <div class="input-field col s4">
-                      <i class="material-icons prefix">collections</i>
-                      <input id="icon_prefix" type="text" class="validate" required>
-                      <label for="icon_prefix">Ruta Imagen</label>
+                      <input id="icon_prefix" name="apellidosUser" type="text" class="validate" required>
+                      <label for="icon_prefix">Apellidos</label>
                     </div>
                     <div class="input-field col s4">
-                      <i class="material-icons prefix">collections</i>
-                      <input id="icon_prefix" type="text" class="validate" required>
-                      <label for="icon_prefix">Nombre</label>
+                      <i class="material-icons prefix">assignment_ind</i>
+                      <input id="icon_prefix" name="dniUser" type="text" class="validate" required>
+                      <label for="icon_prefix">DNI</label>
                     </div>
+                    <div class="input-field col s4">
+                      <i class="material-icons prefix">child_care</i>
+                      <input id="icon_prefix"  name="edadUser" type="text" class="validate" required>
+                      <label for="icon_prefix">Edad</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <i class="material-icons prefix">email</i>
+                      <input id="icon_prefix" name="emailUser" type="text" class="validate" required>
+                      <label for="icon_prefix">Email</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <i class="material-icons prefix">call</i>
+                      <input id="icon_prefix" name="telefonoUser" type="text" class="validate" required>
+                      <label for="icon_prefix">Telefono</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <i class="material-icons prefix">school</i>
+                      <input id="icon_prefix" name="cursoUser" type="text" class="validate" required>
+                      <label for="icon_prefix">Curso Impartido</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <select name="sexoUser">
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                      </select>
+                      <label>Sexo</label>
+                    </div>
+                    <div class="col s6">
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+                        <i class="material-icons right">send</i>
+                      </button>
+                  </div>
                   </div>
                 </form>
-              </div>
+            </div>
+            <div class="row">
+              <table>
+                <thead>
+                  <tr>
+                      <th>Nombres</th>
+                      <th>DNI</th>
+                      <th>Sexo</th>
+                      <th>Edad</th>
+                      <th>Email</th>
+                      <th>Telefono</th>
+                      <th>Curso impartido/inscrito</th>                      
+                  </tr>
+                </thead>
+        
+                <tbody id="profesor">                  
+                </tbody>
+              </table>
+            </div>
         </div>
         <div id="curso" class="col s12">Test 2</div>        
       </div>
