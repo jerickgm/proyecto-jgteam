@@ -82,7 +82,7 @@
                       <button class="btn waves-effect waves-light blue darken-3" type="submit" name="action">Registrar
                         <i class="material-icons right">send</i>
                       </button>
-                  </div>
+                    </div>
                   </div>
                 </form>
             </div>
@@ -110,11 +110,49 @@
             </div>
             
         </div>
-        <div id="curso" class="col s12"></div>        
-      </div>
-             
-
-
+        <div id="curso" class="col s12">
+          <br>
+          <div class="row">
+              <form id="formCurso" class="col s12">                
+                <div class="row">
+                  <div class="input-field col s4">
+                    <i class="material-icons prefix">video_label</i>
+                    <input id="nombre" name="nombreCurso" type="text" class="validate" required>
+                    <label for="nombre">Nombre del curso</label>
+                  </div>
+                  
+                  <div class="input-field col s4">
+                    <i class="material-icons prefix">image</i>
+                    <input id="image" name="imgPoster" type="text" class="validate" required>
+                    <label for="image">Poster</label>
+                  </div>
+                  <div class="input-field col s4">
+                    <i class="material-icons prefix">video_library</i>
+                    <input id="clases"  name="cantClases" type="text" class="validate" required>
+                    <label for="clases">Cantidad de Clases</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" name="descripcionCurso" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Descripcion del Curso</label>
+                  </div>
+                  <br>                 
+                  <div class="col s4">
+                    <button class="btn waves-effect waves-light blue darken-3" type="submit" name="action">Registrar
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+              </form>     
+          </div>
+          
+            <div class="row">
+              <div id="cardCurso" class="col s12">
+                
+              </div>
+              
+            </div>
+          
+        </div>        
+      </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
