@@ -26,40 +26,49 @@
             <br>
             <div class="row">
                 <form id="formUser" class="col s12">
+                  <div class="input-field col s12">
+                    <select name="selectUser">
+                      <option value="" disabled selected>Seleccione</option>
+                      <option value="1">Profesor</option>
+                      <option value="2">Alumno</option>
+                    </select>
+                    <label>Tipo de usuario</label>
+                  </div>
                   <div class="row">
-                    <div class="input-field col s4">
+                    <div class="input-field col s6">
                       <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" name="nombreUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Nombre</label>
+                      <input id="nombre" name="nombreUser" type="text" class="validate" required>
+                      <label for="nombre">Nombre</label>
                     </div>
-                    <div class="input-field col s4">
-                      <input id="icon_prefix" name="apellidosUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Apellidos</label>
+                    <div class="input-field col s6">
+                      <input id="apellidos" name="apellidosUser" type="text" class="validate" required>
+                      <label for="apellidos">Apellidos</label>
                     </div>
                     <div class="input-field col s4">
                       <i class="material-icons prefix">assignment_ind</i>
-                      <input id="icon_prefix" name="dniUser" type="text" class="validate" required>
-                      <label for="icon_prefix">DNI</label>
+                      <input id="dni" name="dniUser" type="text" class="validate" required>
+                      <label for="dni">DNI</label>
                     </div>
                     <div class="input-field col s4">
                       <i class="material-icons prefix">child_care</i>
-                      <input id="icon_prefix"  name="edadUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Edad</label>
+                      <input id="edad"  name="edadUser" type="text" class="validate" required>
+                      <label for="edad">Edad</label>
                     </div>
                     <div class="input-field col s4">
                       <i class="material-icons prefix">email</i>
-                      <input id="icon_prefix" name="emailUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Email</label>
+                      <input id="email" name="emailUser" type="email" class="validate" required>
+                      <label for="email">Email</label>
+                      <span class="helper-text" data-error="falta @" data-success="Bien">usuario@dominio.com</span>
                     </div>
                     <div class="input-field col s4">
                       <i class="material-icons prefix">call</i>
-                      <input id="icon_prefix" name="telefonoUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Telefono</label>
+                      <input id="telefono" name="telefonoUser" type="tel" class="validate" required>
+                      <label for="telefono">Telefono</label>
                     </div>
                     <div class="input-field col s4">
                       <i class="material-icons prefix">school</i>
-                      <input id="icon_prefix" name="cursoUser" type="text" class="validate" required>
-                      <label for="icon_prefix">Curso Impartido</label>
+                      <input id="curse" name="cursoUser" type="text" class="validate" required>
+                      <label for="curse">Curso Impartido</label>
                     </div>
                     <div class="input-field col s4">
                       <select name="sexoUser">
@@ -69,8 +78,8 @@
                       </select>
                       <label>Sexo</label>
                     </div>
-                    <div class="col s6">
-                      <button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+                    <div class="col s4">
+                      <button class="btn waves-effect waves-light blue darken-3" type="submit" name="action">Registrar
                         <i class="material-icons right">send</i>
                       </button>
                   </div>
@@ -78,25 +87,30 @@
                 </form>
             </div>
             <div class="row">
-              <table>
-                <thead>
-                  <tr>
-                      <th>Nombres</th>
-                      <th>DNI</th>
-                      <th>Sexo</th>
-                      <th>Edad</th>
-                      <th>Email</th>
-                      <th>Telefono</th>
-                      <th>Curso impartido/inscrito</th>                      
-                  </tr>
-                </thead>
-        
-                <tbody id="profesor">                  
-                </tbody>
-              </table>
+              <div class="col s12">
+                <ul class="tabs">
+                  <li class="tab col s3"><a class="active"  href="#profesor">Profesor</a></li>
+                  <li class="tab col s3"><a href="#alumno">Alumno</a></li>
+                </ul>
+              </div>
+              <div id="profesor" class="col s12">
+                <div class="row">
+                  <table id="userProfesor">
+                    
+                  </table>
+                </div>
+              </div>
+              <div id="alumno" class="col s12">
+                <div class="row">
+                  <table id="userAlumno">
+                    
+                  </table>
+                </div>
+              </div>
             </div>
+            
         </div>
-        <div id="curso" class="col s12">Test 2</div>        
+        <div id="curso" class="col s12"></div>        
       </div>
              
 
